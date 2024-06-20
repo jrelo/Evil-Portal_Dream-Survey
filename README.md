@@ -1,8 +1,7 @@
 # Evil-Portal_Dream-Survey
 A non-malicious homage to the Willamette Valley Dream Survey for Flipper Zero Evil-Portal. Tempt people into joining your mysterious AP, and share their dreams.
-Some people may know of the dream survey from the stupid conspiracy theories surrounding FUTEL, who actually had nothing to do with it, and only added it to their payphone directory.
-Futel is a super cool non-profit keeping payphone and phreak culture alive: https://futel.net/
-There is a sense of mystery behind the original posters, but FUTEL is unrelated. Some large youtubers made fools of themselves with this misconception.
+Some people may know the dream survey from dumb youtuber conspiracy theories surrounding FUTEL, who had nothing to do with it.
+Futel is a super cool non-profit keeping payphone and phreak culture alive: https://futel.net/ . they just added it to their directory because it was strange.
 I have included a jpg of one of the original posters for reference.
 
 Evil Portal waits for a request with email and password params. In this code we use adventurer and dream, and then reassign before sending the request:
